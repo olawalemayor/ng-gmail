@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  --PrimaryCol: #ff0000;
+  --secondaryCol: #00b900;
+  --thirdCol: #0000ff;
+  --lastCol: #ffff00;
+  --bodyCol: #fff;
+  --textCol: #000;
+  --heading1: 48px;
+  --heading2: 36px;
+  --heading3: 24px;
+  --heading4: 18px;
+  --heading5: 14px;
+  --heading6: 12px;
+  --box-shadow: 0px 3px 8.4px -3px rgb(173, 173, 173);
+  --menuCol: rgb(228, 228, 228);
+}
+
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+}

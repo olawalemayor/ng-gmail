@@ -1,0 +1,68 @@
+.loader {
+  text-align: center;
+  margin: 0 auto;
+  padding: 12%;
+  max-width: 15rem;
+  max-height: 15rem;
+  border-radius: 50%;
+  animation: load ease-in-out 2s infinite;
+}
+
+.loader p {
+  font-size: var(--heading3);
+}
+
+.logo {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+.logo img {
+  width: 80%;
+}
+
+@keyframes load {
+  0% {
+    background-color: rgba(126, 126, 126, 0.2);
+  }
+  100% {
+    background-color: unset;
+  }
+}
+
+.loadbar {
+  margin-top: 2rem;
+  width: 100%;
+  display: block;
+  height: 5px;
+  background-color: #ff0000;
+  animation: loading ease-in 10s;
+}
+
+@keyframes loading {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/** App body */
+.app-body {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.left-sidebar {
+  display: inline;
+  max-width: 200px;
+  width: 200px;
+}
+
+.content {
+  display: inline;
+}
+
+.right-sidebar {
+}

@@ -3,8 +3,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'gm-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'ng-gmail';
+  logo: string = '../assets/images/gmail transparent logo.png';
+  contentIsLoaded: boolean = true;
 }

@@ -1,0 +1,78 @@
+<div class="create-btn">
+  <button>
+    <span class="plus"><img src="../../../assets/images/compose.png" /></span>
+    <span class="message">Compose</span>
+  </button>
+</div>
+
+<div class="menu">
+  <div
+    class="menu-item"
+    *ngFor="let item of items"
+    (click)="handleMenu(item, menuItem)"
+    #menuItem
+  >
+    <div class="icon">
+      <span class="material-icons">{{ item.icon }}</span>
+    </div>
+    <div class="item">
+      {{ item.menu }}
+    </div>
+    <div class="indicator" *ngIf="item.indicator > 0">
+      {{ item.indicator | number }}
+    </div>
+  </div>
+
+  <div class="more-menu" *ngIf="showMoreMenu">
+    <div
+      class="more-menu-item"
+      *ngFor="let moreItem of moreMenu"
+      (click)="handleMenu(moreItem, menuItem)"
+      #menuItem
+    >
+      <div class="icon">
+        <span class="material-icons">{{ moreItem.icon }}</span>
+      </div>
+      <div class="item">
+        {{ moreItem.menu }}
+      </div>
+      <div class="indicator" *ngIf="moreItem.indicator">
+        {{ moreItem.indicator | number }}
+      </div>
+    </div>
+
+    <div class="submenu" *ngIf="showSubmenu">
+      <div
+        class="submenu-item"
+        *ngFor="let menu of categories"
+        (click)="handleMenu(menu, menuItem)"
+        #menuItem
+      >
+        <div class="icon">
+          <span class="material-icons">{{ menu.icon }}</span>
+        </div>
+        <div class="item">{{ menu.menu }}</div>
+        <div class="indicator" *ngIf="menu.indicator">
+          {{ menu.indicator | number }}
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="extra-menu-item"
+      *ngFor="let item of extra"
+      (click)="handleMenu(item, menuItem)"
+      #menuItem
+    >
+      <div class="icon">
+        <span class="material-icons">{{ item.icon }}</span>
+      </div>
+      <div class="item">
+        {{ item.menu }}
+      </div>
+      <div class="indicator" *ngIf="item.indicator > 0">
+        {{ item.indicator | number }}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,70 @@
+.create-btn > button {
+  margin: 1rem 0.5rem;
+  padding: 1rem;
+  background-color: unset;
+  box-shadow: var(--box-shadow);
+  border: unset;
+  border-radius: 25px;
+  cursor: pointer;
+  justify-items: center;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.create-btn > button > span.plus {
+  padding-right: 1rem;
+}
+
+.create-btn > button:hover {
+  box-shadow: 0px 3px 8.4px -3px;
+}
+
+.create-btn > button > span.message {
+  display: contents;
+}
+.create-btn > button:hover > span.message {
+  display: contents;
+}
+
+.menu-item,
+.more-menu-item,
+.extra-menu-item {
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  font-size: 14px;
+}
+
+.submenu-item {
+  font-size: 14px;
+  padding: 0.5rem 0.5rem 0.5rem 3rem;
+}
+
+.item {
+  padding-left: 1rem;
+}
+
+.menu-item,
+.more-menu-item,
+.submenu-item,
+.extra-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  position: relative;
+}
+
+.indicator {
+  position: absolute;
+  right: 1rem;
+}
+
+.menu-item:hover,
+.more-menu-item:hover,
+.submenu-item:hover,
+.extra-menu-item:hover,
+.active-menu {
+  background-color: var(--menuCol);
+  border-radius: 0 15px 15px 0;
+}

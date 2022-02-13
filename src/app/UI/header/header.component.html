@@ -1,0 +1,96 @@
+<div class="header" id="header">
+  <div class="menu-brand">
+    <div
+      class="menu rel-pos"
+      #icon1
+      (mouseenter)="showInfo(icon1)"
+      (mouseleave)="hideInfo(icon1)"
+    >
+      <button>
+        <span class="material-icons">menu</span>
+      </button>
+      <p class="hover-text">Main menu</p>
+    </div>
+    <div class="brand">
+      <a routerLink=""><img [src]="logo" /> Gmail</a>
+    </div>
+  </div>
+  <div class="search-tools">
+    <div></div>
+    <div class="search">
+      <div
+        class="rel-pos"
+        #icon2
+        (mouseenter)="showInfo(icon2)"
+        (mouseleave)="hideInfo(icon2)"
+      >
+        <button>
+          <span class="material-icons">search</span>
+        </button>
+        <p class="hover-text">Search</p>
+      </div>
+      <input type="text" name="search" id="search" placeholder="Search mail" />
+      <div
+        class="rel-pos"
+        #icon3
+        (mouseenter)="showInfo(icon3)"
+        (mouseleave)="hideInfo(icon3)"
+      >
+        <button>
+          <span class="material-icons">manage_search</span>
+        </button>
+        <p class="hover-text">Show search options</p>
+      </div>
+    </div>
+    <div class="tools">
+      <div
+        class="rel-pos"
+        #icon4
+        (mouseenter)="showInfo(icon4)"
+        (mouseleave)="hideInfo(icon4)"
+      >
+        <button>
+          <span class="material-icons">help_outline</span>
+        </button>
+        <p class="hover-text">Support</p>
+      </div>
+      <div
+        class="rel-pos"
+        #icon5
+        (mouseenter)="showInfo(icon5)"
+        (mouseleave)="hideInfo(icon5)"
+      >
+        <button>
+          <span class="material-icons-outlined">settings</span>
+        </button>
+        <p class="hover-text">Settings</p>
+      </div>
+    </div>
+    <div class="user-apps">
+      <div
+        class="rel-pos"
+        #icon6
+        (mouseenter)="showInfo(icon6)"
+        (mouseleave)="hideInfo(icon6)"
+      >
+        <button>
+          <span class="material-icons">apps</span>
+        </button>
+        <p class="hover-text">Google apps</p>
+      </div>
+      <div
+        class="rel-pos"
+        #icon7
+        (mouseenter)="showInfo(icon7)"
+        (mouseleave)="hideInfo(icon7)"
+      >
+        <img src="../../../assets/images/gmail transparent logo.png" />
+        <div class="hover-text pos-end">
+          <h6>Google Account</h6>
+          <p>John Doe</p>
+          <p>johndoe@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

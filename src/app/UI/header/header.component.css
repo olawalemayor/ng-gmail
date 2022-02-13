@@ -1,0 +1,160 @@
+a {
+  text-decoration: none;
+  color: var(--textCol);
+}
+
+.brand {
+  font-size: 20px;
+}
+
+.brand img {
+  width: 35px;
+  padding: 0 0.5rem 0 1rem;
+}
+
+.header {
+  padding: 7px;
+  display: flex;
+  align-items: center;
+  min-width: min-content;
+  max-width: 100%;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(160, 159, 159, 0.2);
+}
+
+.menu-brand {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  width: 250px;
+  padding: 0 20px;
+}
+
+.menu > button {
+  cursor: pointer;
+  background-color: unset;
+  font-size: var(--heading3);
+  border: 0;
+}
+
+.menu > .brand {
+  display: flex;
+  align-items: center;
+}
+
+.search-tools {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background: rgb(239, 239, 239);
+  padding: 5px 15px;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.search:focus-within {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+}
+
+.search > input {
+  width: 40rem;
+  height: 2rem;
+  border: 0;
+  background: unset;
+  font-size: 16px;
+  padding-left: 1rem;
+  letter-spacing: 1px;
+}
+
+.search > input:focus {
+  outline: 0;
+}
+
+.search button {
+  color: rgb(87, 86, 86);
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background-color: unset;
+  cursor: pointer;
+  font-size: var(--heading4);
+}
+
+.search button:hover {
+  background-color: rgb(210, 210, 210);
+}
+
+.tools {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tools > div,
+.user-apps > div {
+  padding: 0 5px;
+}
+
+.user-apps {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.user-apps img {
+  width: 40px;
+  border-radius: 20px;
+}
+
+.rel-pos {
+  position: relative;
+}
+
+.hover-text {
+  position: absolute;
+  display: none;
+  width: max-content;
+  background-color: rgba(20, 20, 20, 0.789);
+  color: #fff;
+  padding: 0.5rem;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.pos-end {
+  right: 1rem;
+}
+
+.showInfo {
+  display: block !important;
+}
+
+.tools button,
+.user-apps button,
+.user-apps img,
+.menu button {
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  height: 45px;
+  width: 45px;
+  background: unset;
+  border-radius: 50%;
+}
+
+.tools button:hover,
+.user-apps button:hover,
+.menu button:hover {
+  background-color: rgb(219, 219, 219);
+}
