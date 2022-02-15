@@ -58,6 +58,25 @@
   display: inline;
   max-width: 200px;
   width: 200px;
+  z-index: 99;
+  background-color: #fff;
+}
+
+.adjust-leftbar {
+  display: inline;
+  width: 90px !important;
+  max-width: 90px !important;
+}
+
+.position-leftbar {
+  padding-right: 1rem;
+  box-shadow: 2px 0px 5px 1px rgb(124, 124, 124);
+  position: absolute;
+  left: 0;
+}
+
+.padded-page {
+  padding-left: 90px;
 }
 
 .content {

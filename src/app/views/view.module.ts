@@ -1,0 +1,62 @@
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import {
+  AllMailComponent,
+  ChatsComponent,
+  DraftsComponent,
+  ForumsComponent,
+  ImportantComponent,
+  InboxComponent,
+  ManageLabelsComponent,
+  PromotionsComponent,
+  ScheduledComponent,
+  SentComponent,
+  SnoozedComponent,
+  SocialComponent,
+  SpamComponent,
+  StarredComponent,
+  TrashComponent,
+  UpdatesComponent,
+} from '.';
+
+@NgModule({
+  declarations: [
+    InboxComponent,
+    StarredComponent,
+    SnoozedComponent,
+    SentComponent,
+    DraftsComponent,
+    ImportantComponent,
+    ChatsComponent,
+    ScheduledComponent,
+    AllMailComponent,
+    SpamComponent,
+    TrashComponent,
+    SocialComponent,
+    UpdatesComponent,
+    ForumsComponent,
+    PromotionsComponent,
+    ManageLabelsComponent,
+  ],
+  imports: [CommonModule, RouterModule],
+  exports: [
+    InboxComponent,
+    StarredComponent,
+    SnoozedComponent,
+    SentComponent,
+    DraftsComponent,
+    ImportantComponent,
+    ChatsComponent,
+    ScheduledComponent,
+    AllMailComponent,
+    SpamComponent,
+    TrashComponent,
+    SocialComponent,
+    UpdatesComponent,
+    ForumsComponent,
+    PromotionsComponent,
+    ManageLabelsComponent,
+  ],
+})
+export class ViewModule {}

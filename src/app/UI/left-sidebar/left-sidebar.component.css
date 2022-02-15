@@ -60,6 +60,13 @@
   right: 1rem;
 }
 
+.indicator-ball {
+  color: #ff0000;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+}
+
 .menu-item:hover,
 .more-menu-item:hover,
 .submenu-item:hover,

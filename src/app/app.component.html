@@ -8,12 +8,20 @@
   </div>
 </div>
 
-<gm-header *ngIf="contentIsLoaded"></gm-header>
+<gm-header
+  *ngIf="contentIsLoaded"
+  (toggleIcon)="changeToggle($event)"
+  (toggleStates)="setToggleState($event)"
+></gm-header>
 <div class="app-body" *ngIf="contentIsLoaded">
-  <div class="left-sidebar">
-    <gm-left-sidebar></gm-left-sidebar>
+  <div [ngClass]="toggleClass() + statedClass">
+    <gm-left-sidebar
+      [toggleIcon]="toggleIcon"
+      (mouseenter)="hoverSidebar()"
+      (mouseleave)="hoverSidebar()"
+    ></gm-left-sidebar>
   </div>
-  <div class="content">
+  <div class="content" [ngClass]="pageStyleClass">
     <main>
       <router-outlet></router-outlet>
     </main>

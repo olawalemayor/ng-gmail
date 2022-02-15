@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -9,9 +9,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class LeftSidebarComponent implements OnInit {
   showSubmenu = false;
   showMoreMenu = false;
+  @Input() toggleIcon: any;
 
-  handleMenu(item: any, menuItem: HTMLDivElement) {
-    const nav = `/${item.menu.toLowerCase()}`;
+  styleMenu = (item: any) => {
+    return this.router.url === item.menu.toLowerCase() ? 'active-menu' : '';
+  };
+
+  handleMenu(item: any) {
     if (item.submenu) {
       this.showSubmenu = !this.showSubmenu;
     } else if (item.moreMenu) {
@@ -20,30 +24,35 @@ export class LeftSidebarComponent implements OnInit {
       item.icon = this.showMoreMenu
         ? 'keyboard_arrow_up'
         : 'keyboard_arrow_down';
-    } else if (item.action) {
-      console.log('I am working');
     } else {
-      this.router.navigate([`${item.menu.toLowerCase()}`]);
-      if (nav !== this.router.url) menuItem.classList.remove('active-menu');
-      console.log(nav, ' is ', this.route.pathFromRoot);
-      menuItem.classList.add('active-menu');
+      // this.router.navigate([currentUrl]);
     }
   }
 
   categories = [
-    { icon: 'people', menu: 'Social', indicator: 2163 },
-    { icon: 'update', menu: 'Updates', indicator: 3918 },
-    { icon: 'forum', menu: 'Forum', indicator: 11 },
-    { icon: 'sell', menu: 'Promotions', indicator: 2890 },
+    { icon: 'people', menu: 'Social', path: 'social', indicator: 2163 },
+    { icon: 'update', menu: 'Updates', path: 'updates', indicator: 3918 },
+    { icon: 'forum', menu: 'Forum', path: 'forum', indicator: 11 },
+    { icon: 'sell', menu: 'Promotions', path: 'promotions', indicator: 2890 },
   ];
 
   moreMenu = [
-    { icon: 'label_important', menu: 'Important', indicator: 0 },
-    { icon: 'chat', menu: 'Chats', indicator: 0 },
-    { icon: 'schedule_send', menu: 'Scheduled', indicator: 0 },
-    { icon: 'mail', menu: 'All Mail', indicator: 0 },
-    { icon: 'warning', menu: 'Spam', indicator: 0 },
-    { icon: 'restore_from_trash', menu: 'Trash', indicator: 0 },
+    {
+      icon: 'label_important',
+      menu: 'Important',
+      path: 'important',
+      indicator: 0,
+    },
+    { icon: 'chat', menu: 'Chats', path: 'chat', indicator: 0 },
+    {
+      icon: 'schedule_send',
+      menu: 'Scheduled',
+      path: 'scheduled',
+      indicator: 0,
+    },
+    { icon: 'mail', menu: 'All Mail', path: 'all mail', indicator: 0 },
+    { icon: 'warning', menu: 'Spam', path: 'spam', indicator: 0 },
+    { icon: 'restore_from_trash', menu: 'Trash', path: 'trash', indicator: 0 },
     {
       icon: 'more',
       menu: 'Category',
@@ -52,11 +61,11 @@ export class LeftSidebarComponent implements OnInit {
   ];
 
   items: any[] = [
-    { icon: 'inbox', menu: 'Inbox', indicator: 4055 },
-    { icon: 'star', menu: 'Starred', indicator: 0 },
-    { icon: 'snooze', menu: 'Snoozed', indicator: 0 },
-    { icon: 'send', menu: 'Sent', indicator: 0 },
-    { icon: 'drafts', menu: 'Drafts', indicator: 0 },
+    { icon: 'inbox', menu: 'Inbox', path: 'inbox', indicator: 4055 },
+    { icon: 'star', menu: 'Starred', path: 'starred', indicator: 0 },
+    { icon: 'snooze', menu: 'Snoozed', path: 'snoozed', indicator: 0 },
+    { icon: 'send', menu: 'Sent', path: 'sent', indicator: 0 },
+    { icon: 'drafts', menu: 'Drafts', path: 'drafts', indicator: 0 },
     {
       icon: 'keyboard_arrow_down',
       menu: 'More',
@@ -65,7 +74,7 @@ export class LeftSidebarComponent implements OnInit {
   ];
 
   extra: any[] = [
-    { icon: 'settings', menu: 'Manage labels' },
+    { icon: 'settings', menu: 'Manage labels', path: 'manage labels' },
     { icon: '+', menu: 'Create new label', action: true },
   ];
 

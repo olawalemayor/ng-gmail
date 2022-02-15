@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'gm-header',
@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   constructor() {}
+
+  toggled = false;
+  toggleState = false;
 
   logo: string = '../../../assets/images/gmail transparent logo.png';
 
@@ -17,6 +20,16 @@ export class HeaderComponent implements OnInit {
   hideInfo = (icons: HTMLDivElement) => {
     icons.children[1].classList.remove('showInfo');
   };
+
+  toggle() {
+    this.toggled = !this.toggled;
+    this.toggleState = !this.toggleState;
+    this.toggleIcon.emit(this.toggled);
+    this.toggleStates.emit(this.toggleState);
+  }
+
+  @Output() toggleIcon: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Output() toggleStates: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   ngOnInit(): void {}
 }

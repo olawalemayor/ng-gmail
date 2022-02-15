@@ -13,6 +13,7 @@ a {
 }
 
 .header {
+  z-index: 99999;
   padding: 7px;
   display: flex;
   align-items: center;

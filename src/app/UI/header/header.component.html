@@ -6,7 +6,7 @@
       (mouseenter)="showInfo(icon1)"
       (mouseleave)="hideInfo(icon1)"
     >
-      <button>
+      <button (click)="toggle()">
         <span class="material-icons">menu</span>
       </button>
       <p class="hover-text">Main menu</p>
